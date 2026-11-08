@@ -1,7 +1,7 @@
 # Scorer in a Box: A One-GPU Replica of the Gemma 4 Agent Scorer, and the Silent Failures It Catches
 *Subtitle: an open kit for evaluating, debugging and fine-tuning local coding agents under the competition's real conditions*
 
-**Shashanka B R**<sup>1</sup> · <sup>1</sup>IBM · shashanka.b.r@ibm.com
+**Shashanka B R** · shashanka.b.r@ibm.com
 Code: https://github.com/shashanka300/runtime-bound · PDF: https://github.com/shashanka300/runtime-bound/blob/main/paper/resource/main.pdf
 
 <!-- Kaggle Paper Track writeup body (Best New Resource). Same text as paper/resource/main.tex. -->
