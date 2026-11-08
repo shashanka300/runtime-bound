@@ -184,4 +184,13 @@ evidence available at the time, is in `docs/design_changes.md`.
 
 ## References
 
-Full entries in the PDF and in `paper/resource/refs.bib`.
+- Agarwal, R., Schwarzer, M., Castro, P. S., Courville, A., Bellemare, M. G. Deep Reinforcement Learning at the Edge of the Statistical Precipice. NeurIPS 2021.
+- Badertdinov, I., Golubev, A., Nekrashevich, M., Shevtsov, A., Karasik, S., Andriushchenko, A., Trofimova, M., Litvintseva, D., Yangel, B. SWE-rebench: An Automated Pipeline for Task Collection and Decontaminated Evaluation of Software Engineering Agents. NeurIPS 2025 (arXiv:2505.20411).
+- B R, Shashanka. Runtime-Bound: What Limits a Local 31B Coding Agent, and What Local Evaluation Gets Wrong. Gemma 4 Developer Agent Paper Track, Kaggle, 2026 (companion paper).
+- Dettmers, T., Pagnoni, A., Holtzman, A., Zettlemoyer, L. QLoRA: Efficient Finetuning of Quantized LLMs. NeurIPS 2023.
+- Hu, E. J. et al. LoRA: Low-Rank Adaptation of Large Language Models. ICLR 2022.
+- Jimenez, C. E. et al. SWE-bench: Can Language Models Resolve Real-World GitHub Issues? ICLR 2024.
+- Kwon, W. et al. Efficient Memory Management for Large Language Model Serving with PagedAttention. SOSP 2023.
+- Markowitz, E. et al. Google - The Gemma 4 Developer Agent Paper Track. Kaggle, 2026.
+- Pan, J. et al. Training Software Engineering Agents and Verifiers with SWE-Gym. ICML 2025.
+- Yang, J. et al. SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering. NeurIPS 2024.
