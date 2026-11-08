@@ -27,7 +27,7 @@
 \maketitle
 
 \begin{abstract}
-Our first Gemma~4 coding agent solved 31\% of tasks on our own GPU and 3\% on the competition leaderboard. This paper follows that gap to where it came from, and to what it says about the real limits of a small local coding agent. We rebuilt the scorer on one consumer GPU (an RTX 5090) and moved our runs toward it one condition at a time. On the way we found three silent defects on the scorer's side, each later confirmed or fixed by the organizers: adapters were wiped, the thinking budget was never sent, and the engine dropped the agent's own earlier reasoning from its prompt. We also found three traps on our side that looked exactly like real effects. Then we asked where the agent's time and context actually go. The largest gain we measured came from a single configuration line: a 16k output reserve inside a 32k window caused 90\% of the starter agent's failures, and fixing it lifted the local solve rate from 18.8\% to 31.3\%. Tasks that run out of time lose most of it in one to three turns that think until the token cap, half of them repeating themselves. And ten things that should have helped, from planning layers and sub-agents to fine-tuning on the agent's own successes and editing its weights, did not beat the plain tuned agent. The common thread is the runtime around the model: the clock, the window and the way history is compacted. That is where we think the next gains are, and we release the tooling to measure them.
+Our first Gemma~4 coding agent solved 31\% of tasks on our own GPU and 3\% on the competition leaderboard. This paper follows that gap to where it came from, and to what it says about the real limits of a small local coding agent. We rebuilt the scorer on one consumer GPU (an RTX 5090) and moved our runs toward it one condition at a time. On the way we found three silent defects on the scorer's side, each later confirmed or fixed by the organizers: adapters were wiped, the thinking budget was never sent, and the engine dropped the agent's own earlier reasoning from its prompt. We also found two traps on our own side that looked exactly like real effects. Then we asked where the agent's time and context actually go. The largest gain we measured came from a single configuration line: a 16k output reserve inside a 32k window caused 90\% of the starter agent's failures, and fixing it lifted the local solve rate from 18.8\% to 31.3\%. Tasks that run out of time lose most of it in one to three turns that think until the token cap, half of them repeating themselves. And ten things that should have helped, from planning layers and sub-agents to fine-tuning on the agent's own successes and editing its weights, did not beat the plain tuned agent. The common thread is the runtime around the model: the clock, the window and the way history is compacted. That is where we think the next gains are, and we release the tooling to measure them.
 \end{abstract}
 
 \section{Introduction}
@@ -66,12 +66,12 @@ A local score is only useful if it predicts the scorer. Our first submission sol
 \label{fig:ladder}
 \end{figure}
 
-All three defects were reported on the competition forum and later confirmed or fixed (adapters load and thoughts are kept in the current wheelhouse). Three local artefacts nearly misled us and are worth naming because they are easy to repeat:
+All three defects were reported on the competition forum and later confirmed or fixed (adapters load and thoughts are kept in the current wheelhouse). Two local artefacts nearly misled us and are worth naming because they are easy to repeat:
 \begin{itemize}
 \item \textbf{KV reservation.} vLLM's YAML config loader silently drops boolean \texttt{false}, so \texttt{scheduler-\allowbreak reserve-\allowbreak full-isl: false} was never applied. At concurrency 2 this produced request stalls that we first mistook for a 12.5-point engine effect.
 \item \textbf{Wheel cache.} The harness caches unpacked dependency wheels under a fixed name that ignores which wheel set built it. It poisoned our first gradability sweep, and two months later a cache built from 1,450 SWE-rebench wheels broke pytest on every public task of an adapter screen (0/19 solved; the rerun with an isolated cache solved 9/32).
-\item \textbf{Telemetry.} We log every run with a manifest and 1\,Hz GPU telemetry, so these artefacts were found by inspecting traces rather than by a lucky reading of a score.
 \end{itemize}
+Both were found in telemetry and traces rather than in scores: every run logs a manifest, 1\,Hz GPU samples and the engine's counters, and the stall appeared as requests waiting with an empty KV cache.
 
 \section{Results}
 \subsection{Accounting: one line explained most failures (C1)}

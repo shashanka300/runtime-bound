@@ -17,7 +17,7 @@ real limits of a small local coding agent. We rebuilt the scorer on one consumer
 5090) and moved our runs toward it one condition at a time. On the way we found three silent
 defects on the scorer's side, each later confirmed or fixed by the organizers: adapters were
 wiped, the thinking budget was never sent, and the engine dropped the agent's own earlier
-reasoning from its prompt. We also found three traps on our side that looked exactly like real
+reasoning from its prompt. We also found two traps on our own side that looked exactly like real
 effects. Then we asked where the agent's time and context actually go. The largest gain we
 measured came from a single configuration line: a 16k output reserve inside a 32k window caused
 90% of the starter agent's failures, and fixing it lifted the local solve rate from 18.8% to
@@ -98,7 +98,7 @@ agent, dev-40, seed 0). The grey bar is a local artefact, not a scorer effect (s
 Even the stall-free scorer replica solves 8× more than the board.*
 
 All three defects were reported on the competition forum and later confirmed or fixed (adapters
-load and thoughts are kept in the current wheelhouse). Three local artefacts nearly misled us and
+load and thoughts are kept in the current wheelhouse). Two local artefacts nearly misled us and
 are worth naming because they are easy to repeat:
 
 - **KV reservation.** vLLM's YAML config loader silently drops boolean `false`, so
@@ -108,8 +108,9 @@ are worth naming because they are easy to repeat:
   which wheel set built it. It poisoned our first gradability sweep, and two months later a cache
   built from 1,450 SWE-rebench wheels broke pytest on every public task of an adapter screen
   (0/19 solved; the rerun with an isolated cache solved 9/32).
-- **Telemetry.** We log every run with a manifest and 1 Hz GPU telemetry, so these artefacts were
-  found by inspecting traces rather than by a lucky reading of a score.
+Both were found in telemetry and traces rather than in scores: every run logs a manifest,
+1 Hz GPU samples and the engine's counters, and the stall appeared as requests waiting with
+an empty KV cache.
 
 ## 4 Results
 

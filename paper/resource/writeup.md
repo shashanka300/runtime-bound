@@ -19,9 +19,10 @@ at the scorer's speed, compiles every bundle with the scorer's own code before i
 submission, and adds probes for the parts of the stack that fail quietly: a random-weight adapter
 canary, a cross-check of sampling settings against the scorer's own translation code, and a proxy
 that replays identical multi-turn requests on two engines. In seven weeks it caught six silent
-failures: the three above, all later confirmed or fixed by the organizers, and three in our own
-setup that had looked exactly like experimental results, including a 12.5-point "engine effect"
-that turned out to be a dropped configuration flag. The kit also provides per-turn trace
+failures: the three above, all later confirmed or fixed by the organizers; two in our own setup
+that had looked exactly like experimental results, including a 12.5-point "engine effect" that
+turned out to be a dropped configuration flag; and a released test environment that can grade
+only 41 of the 129 public tasks. The kit also provides per-turn trace
 analysis, 142 competition-format tasks from 116 repositories outside the public set, and a LoRA
 trainer for the competition's packed int4 checkpoint, which standard tooling cannot fine-tune.
 Each component is described with the failure it exists to catch, and all of it is open source.
