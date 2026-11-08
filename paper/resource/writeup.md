@@ -8,20 +8,23 @@ Code: https://github.com/shashanka300/runtime-bound · PDF: https://github.com/s
 
 ## Abstract
 
-Every team in this competition develops against a scorer it cannot see. Submissions take a day
-to score, each team gets one a day, and the score comes back as a single number with no traces.
-So when a change helps locally and hurts on the board, there is no way to tell whether the agent
-got worse or the local setup was lying. We built a kit that answers that question on one
-consumer GPU. It serves the scorer's exact engine build with the scorer's flags, runs the
-official harness at the scorer's speed, compiles bundles with the scorer's own code before they
-spend a daily slot, and probes the parts of the stack that fail silently: whether an adapter is
-applied, whether the thinking budget reaches the engine, and whether the engine renders
-multi-turn history the way the agent assumes. Around that core sit trace analyses that show
-where an agent's time goes, a pipeline that turns 116 outside repositories into
-competition-format tasks, and a LoRA trainer for the competition's int4 checkpoint that standard
-tooling cannot fine-tune. In seven weeks the kit caught six silent failures, three in the scorer
-itself (all confirmed or fixed by the organizers) and three in our own setup that looked exactly
-like real results. We describe each component, the failure it exists to catch, and how to use it.
+A fine-tuned adapter that changed nothing. A thinking budget that never reached the model. An
+engine that quietly removed the agent's own earlier reasoning from every prompt. None of these
+were bugs in our agent: they were in the competition's scoring stack, and none of them raised an
+error. Each one showed up only as a few points of score, through a feedback loop of one
+submission a day, a day of queueing and a single number back, where a broken stack and a bad
+idea look exactly the same. Scorer in a Box is an open kit that makes such failures visible on
+one consumer GPU. It serves the scorer's exact engine build and flags, runs the official harness
+at the scorer's speed, compiles every bundle with the scorer's own code before it spends a
+submission, and adds probes for the parts of the stack that fail quietly: a random-weight adapter
+canary, a cross-check of sampling settings against the scorer's own translation code, and a proxy
+that replays identical multi-turn requests on two engines. In seven weeks it caught six silent
+failures: the three above, all later confirmed or fixed by the organizers, and three in our own
+setup that had looked exactly like experimental results, including a 12.5-point "engine effect"
+that turned out to be a dropped configuration flag. The kit also provides per-turn trace
+analysis, 142 competition-format tasks from 116 repositories outside the public set, and a LoRA
+trainer for the competition's packed int4 checkpoint, which standard tooling cannot fine-tune.
+Each component is described with the failure it exists to catch, and all of it is open source.
 
 ## 1 Introduction
 
