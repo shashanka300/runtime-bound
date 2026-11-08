@@ -1,0 +1,14 @@
+{
+  "figure": "e1b_context_fixes",
+  "created_utc": "2026-09-26T08:13:22.665211+00:00",
+  "source_runs": [
+    "20260926T023429Z-3d04ef1b-8fb4"
+  ],
+  "note": "",
+  "config_hash": "3d04ef1b3a58",
+  "git": {
+    "sha": "394dcb4a2e9cce21384eef13f9cd78692b7c61dc",
+    "branch": "main",
+    "dirty": true
+  }
+}

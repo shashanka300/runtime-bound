@@ -1,0 +1,23 @@
+experiment: E1_starter_baseline
+description: >-
+  Starter baseline under realistic per-task budgets (6 / 10 min), with a harness
+  self-check (gold/empty patches) and step-level trajectories for E2.
+seed: 0
+
+serving:
+  base_url: http://127.0.0.1:8000
+  model: gemma-4-31b-it
+  max_model_len: 32768
+
+sandbox:
+  profile: dev          # use `eval` (4 GiB / 2 vCPU) for headline numbers
+
+params:
+  submission: competition/sample_submission
+  subset: fidelity10
+  seeds: [0]
+  time_budgets_min: [6.0]   # 10 min dropped 2026-09-25: 98.7% of 6-min runs end before the limit
+  max_tool_calls: null
+  concurrency: 2
+  selfcheck: true
+  min_gold_rate: 0.9

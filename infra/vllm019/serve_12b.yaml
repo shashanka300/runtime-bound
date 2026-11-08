@@ -1,0 +1,24 @@
+# As serve.yaml (V31 scorer flags) for gemma-4-12B-it-qat-w4a16-ct.
+#   MODEL=google/gemma-4-12B-it-qat-w4a16-ct CONFIG=serve_12b.yaml bash infra/vllm019/serve.sh
+host: 127.0.0.1
+port: 8000
+served-model-name: [gemma-4-12b-it-qat-w4a16-ct]
+tensor-parallel-size: 1
+gpu-memory-utilization: 0.90
+max-model-len: 32768
+max-num-seqs: 16
+enable-prefix-caching: true
+enable-prompt-tokens-details: true
+enable-chunked-prefill: true
+language-model-only: true
+enable-lora: false
+kv-cache-dtype: auto
+enable-auto-tool-choice: true
+tool-call-parser: gemma4
+reasoning-parser: gemma4
+reasoning-config: '{"reasoning_start_str": "<|channel>", "reasoning_end_str": "<channel|>"}'
+# scheduler-reserve-full-isl: false is passed by serve.sh as --no-scheduler-reserve-full-isl (vLLM YAML drops boolean false)
+default-chat-template-kwargs: '{"enable_thinking": true}'
+# host (Ryan Holbrook, discussion 748287): the scorer serves the 12B with this override, otherwise
+# vLLM 0.19.1 falls back to the Transformers backend for gemma4_unified and crashes in v_norm
+hf-overrides: '{"architectures": ["Gemma4ForCausalLM"], "model_type": "gemma4"}'

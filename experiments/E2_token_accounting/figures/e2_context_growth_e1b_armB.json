@@ -1,0 +1,14 @@
+{
+  "figure": "e2_context_growth_e1b_armB",
+  "created_utc": "2026-09-26T08:35:24.582215+00:00",
+  "source_runs": [
+    "20260926T083519Z-8755854e-2e18"
+  ],
+  "note": "",
+  "config_hash": "8755854ec13d",
+  "git": {
+    "sha": "c6fe9cb8a664f910fea6644c6906768845ce8faf",
+    "branch": "main",
+    "dirty": true
+  }
+}

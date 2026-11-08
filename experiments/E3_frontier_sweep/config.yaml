@@ -1,0 +1,22 @@
+experiment: E3_frontier_sweep
+description: >-
+  How should 31B-int4 spend its runtime: thinking {2k, 4k, 8k} x fresh-context attempts
+  {1, 2, 4} on dev40 (12B comparison dropped 2026-09-26).
+seed: 0
+
+serving:
+  base_url: http://127.0.0.1:8000
+  model: gemma-4-31b-it     # overridden per model group by the notebook
+  max_model_len: 32768
+
+sandbox:
+  profile: dev
+
+params:
+  base_submission: competition/sample_submission
+  subset: dev40
+  thinking_budgets: [2048, 4096, 8192]
+  attempts: 4
+  ks: [1, 2, 4]
+  output_reserve: 4096
+  time_minutes: 6.0

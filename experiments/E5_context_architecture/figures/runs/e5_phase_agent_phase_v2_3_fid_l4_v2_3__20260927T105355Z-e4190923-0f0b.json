@@ -1,0 +1,14 @@
+{
+  "figure": "e5_phase_agent_phase_v2_3_fid_l4_v2_3",
+  "created_utc": "2026-09-27T12:33:01.536093+00:00",
+  "source_runs": [
+    "20260927T105355Z-e4190923-0f0b"
+  ],
+  "note": "",
+  "config_hash": "e4190923846c",
+  "git": {
+    "sha": "06f05f0f4d46da134255d3507e5a8b9d86678ac2",
+    "branch": "main",
+    "dirty": false
+  }
+}

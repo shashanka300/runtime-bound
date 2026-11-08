@@ -1,0 +1,14 @@
+{
+  "figure": "e1b_context_fixes_armsGH_v019_l4",
+  "created_utc": "2026-09-27T10:40:11.472404+00:00",
+  "source_runs": [
+    "20260927T074744Z-2f65a6f0-1e0d"
+  ],
+  "note": "",
+  "config_hash": "2f65a6f06ab2",
+  "git": {
+    "sha": "e67e4b302610bed13b8d3e3c301785a70f2002dc",
+    "branch": "main",
+    "dirty": false
+  }
+}

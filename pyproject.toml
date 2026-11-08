@@ -1,0 +1,79 @@
+[project]
+name = "challeenge"
+version = "0.1.0"
+description = "Runtime-Bound: wall-clock and context scaling for local SWE agents (Gemma 4 Paper Track)"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "rbcore",
+    "swebox",
+    # notebooks
+    "jupyterlab>=4.6",
+    "ipywidgets>=8.1",
+    "jupytext>=1.19",
+    "papermill>=2.7",
+    # tracking / tracing UIs (run as local services, see infra/services.sh)
+    "mlflow>=3.16",
+    "arize-phoenix>=20.16",
+    # data access
+    "kaggle>=2.2",
+    "huggingface-hub>=0.34",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4",
+    "hypothesis>=6.140",
+    "ruff>=0.13",
+    "mypy>=1.18",
+    "types-pyyaml",
+    "types-psutil",
+    "scipy-stubs",
+    "pre-commit>=4.3",
+    "nbstripout>=0.8",
+]
+
+[tool.uv]
+default-groups = ["dev"]
+
+[tool.uv.workspace]
+members = ["core", "harness"]
+
+[tool.uv.sources]
+rbcore = { workspace = true }
+swebox = { workspace = true }
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["data", "**/runs", "**/executed"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF", "PTH", "NPY"]
+ignore = ["E501", "RUF001", "RUF002", "RUF003"]  # prose in notebooks uses ×, –
+
+[tool.ruff.lint.isort]
+known-first-party = ["rbcore", "swebox"]
+
+[tool.ruff.lint.per-file-ignores]
+"experiments/**/*.py" = ["E402", "B018", "F704"]  # notebook cells: late imports, display exprs, top-level await
+"reports/**/*.py" = ["E402", "B018", "F704"]
+
+[tool.mypy]
+files = ["core/src", "harness/src"]
+exclude = ["harness/src/swebox/assets/"]  # in-container scripts (use pip._vendor)
+python_version = "3.12"
+strict = true
+warn_unused_ignores = true
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = ["networkx", "networkx.*", "litellm", "litellm.*", "pynvml", "scienceplots", "docker", "docker.*", "codecarbon", "mlflow", "prometheus_client.*", "seaborn", "openinference.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["core/tests", "harness/tests"]
+addopts = "-q"
+
+[tool.jupytext]
+formats = "ipynb,py:percent"

@@ -1,0 +1,82 @@
+{
+  "label": "new_wheel_s50",
+  "main_lora_equals_base": true,
+  "canary_equals_base": false,
+  "outputs": {
+    "gemma-4-31b-it": {
+      "text": "The ocean is a vast, mysterious expanse of saltwater that covers the majority of our planet's surface.",
+      "first_token_top5": [
+        [
+          "The",
+          -0.0
+        ],
+        [
+          " The",
+          -13.125
+        ],
+        [
+          "the",
+          -14.9375
+        ],
+        [
+          " provide",
+          -15.625
+        ],
+        [
+          " the",
+          -16.25
+        ]
+      ]
+    },
+    "main_lora": {
+      "text": "The ocean is a vast, mysterious expanse of saltwater that covers the majority of our planet's surface.",
+      "first_token_top5": [
+        [
+          "The",
+          -0.0
+        ],
+        [
+          " The",
+          -13.125
+        ],
+        [
+          "the",
+          -14.9375
+        ],
+        [
+          " provide",
+          -15.625
+        ],
+        [
+          " the",
+          -16.25
+        ]
+      ]
+    },
+    "canary": {
+      "text": "The ocean is a vast, mysteriouserious expanse of saltwater water that covers the majority of our planet and holds countless undiscovered",
+      "first_token_top5": [
+        [
+          "The",
+          -0.0
+        ],
+        [
+          " The",
+          -12.1875
+        ],
+        [
+          "<",
+          -12.375
+        ],
+        [
+          "<|channel>",
+          -13.25
+        ],
+        [
+          "<channel|>",
+          -13.8125
+        ]
+      ]
+    }
+  }
+}

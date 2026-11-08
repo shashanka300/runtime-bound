@@ -1,0 +1,14 @@
+{
+  "figure": "e1b_context_fixes_armF",
+  "created_utc": "2026-09-26T23:20:56.045769+00:00",
+  "source_runs": [
+    "20260926T215221Z-1cdc6ed3-b56f"
+  ],
+  "note": "",
+  "config_hash": "1cdc6ed37d84",
+  "git": {
+    "sha": "5c30ec17881f8977975ed2325589f0b8706a85ab",
+    "branch": "main",
+    "dirty": false
+  }
+}

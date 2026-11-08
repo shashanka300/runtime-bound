@@ -1,0 +1,13 @@
+tag,instance_id,seed,patch_only,primary,scratch_files,repeated_actions,reverted_edits,viewed_gold_file,tool_calls_total,rereads,repo,status,end_reason,agent_error,patch_files,test_exit_code
+arm_B,rich_3064,0,mislocalized_region,mislocalized_region,0,2,0,true,23,2,rich,gradable,submitted,,1,1
+arm_B,rich_3506,0,mislocalized_region,mislocalized_region,1,1,0,true,10,1,rich,gradable,submitted,,2,1
+arm_B,rich_3468,0,no_patch,time_exhausted,0,1,0,true,26,4,rich,gradable,time,,0,1
+arm_B,fastapi_13713,0,no_patch,context_exhausted,0,0,0,true,17,1,fastapi,gradable,error,litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceed,0,
+arm_B,fastapi_13207,1,no_patch,context_exhausted,2,12,1,true,30,0,fastapi,gradable,error,litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceed,2,1
+arm_B,fastapi_13920,0,mislocalized_file,time_exhausted,0,0,0,false,23,1,fastapi,gradable,time,,1,1
+arm_B,rich_3468,1,no_patch,time_exhausted,0,0,0,true,10,1,rich,gradable,time,,0,1
+arm_B,fastapi_14262,0,no_patch,context_exhausted,0,0,0,false,24,3,fastapi,gradable,error,litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceed,0,
+arm_B,rich_3934,0,mislocalized_file,mislocalized_file,2,2,0,true,21,3,rich,gradable,submitted,,3,1
+arm_B,fastapi_15023,0,mislocalized_file,time_exhausted,0,1,0,true,31,1,fastapi,gradable,time,,1,1
+arm_B,rich_3944,0,mislocalized_file,mislocalized_file,0,4,2,false,29,1,rich,gradable,submitted,,1,1
+arm_B,fastapi_15661,0,no_patch,context_exhausted,0,0,0,false,13,0,fastapi,gradable,error,litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceed,0,

@@ -1,0 +1,11 @@
+instance_id,repo,gold,empty,status
+fastapi_11194,fastapi,true,false,gradable
+fastapi_12942,fastapi,true,false,gradable
+fastapi_14303,fastapi,true,false,gradable
+fastapi_14978,fastapi,true,false,gradable
+fastapi_14986,fastapi,true,false,gradable
+requests_7328,requests,false,false,infeasible:airgap_network
+rich_2725,rich,true,false,gradable
+rich_3064,rich,true,false,gradable
+rich_3944,rich,true,false,gradable
+rich_4070,rich,true,false,gradable

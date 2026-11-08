@@ -1,0 +1,28 @@
+experiment: E2_token_accounting
+description: >-
+  Token accounting over swebox step traces (H2): compute view (cached / new / recomputed
+  prefill, thinking / output decode) and context-occupancy view (tool output split into
+  fresh / re-read / truncated / oversized, stale thinking).
+seed: 0
+
+serving:
+  base_url: http://127.0.0.1:8000
+  model: gemma-4-31b-it
+  max_model_len: 32768
+
+sandbox:
+  profile: dev
+
+monitor:
+  # replay is CPU-only analysis; GPU/vLLM/container telemetry would describe other jobs
+  nvml: false
+  vllm: false
+  docker: false
+  codecarbon: false
+
+params:
+  input_dirs: []
+  reread_overlap: 0.5
+  oversized_chars: 20000
+  h2_supported_above: 0.40
+  h2_falsified_below: 0.20

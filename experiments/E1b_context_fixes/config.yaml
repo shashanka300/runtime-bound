@@ -1,0 +1,23 @@
+experiment: E1b_context_fixes
+description: >-
+  Context-budget fixes for the starter agent on 31B: A starter, B output-reserve fix,
+  C B + read/scratch guidance, D B + fresh-context retry (diagnostic); dev40 x 2 seeds.
+seed: 0
+
+serving:
+  base_url: http://127.0.0.1:8000
+  model: gemma-4-31b-it
+  max_model_len: 32768
+
+sandbox:
+  profile: dev
+
+params:
+  base_submission: competition/sample_submission
+  subset: dev40
+  seeds: [0, 1]
+  arms: [B, C, D]
+  time_minutes: 6.0
+  output_reserve: 4096
+  d_context_retries: 2
+  concurrency: 2

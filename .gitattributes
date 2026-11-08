@@ -1,0 +1,3 @@
+# executed run records keep their outputs (graphs); nbstripout applies everywhere else
+experiments/*/executed/*.ipynb -filter
+reports/*/executed/*.ipynb -filter

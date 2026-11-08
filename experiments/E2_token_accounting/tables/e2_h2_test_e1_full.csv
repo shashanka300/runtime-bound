@@ -1,0 +1,2 @@
+verdict,n_tasks,waste_upper,waste_lower,reread_share,truncated_share,recomputed_share
+INCONCLUSIVE,387,"0.362 [0.339, 0.386] (n=387)","0.263 [0.248, 0.279] (n=387)","0.022 [0.017, 0.028] (n=387)","0.213 [0.199, 0.228] (n=387)","0.127 [0.111, 0.143] (n=387)"

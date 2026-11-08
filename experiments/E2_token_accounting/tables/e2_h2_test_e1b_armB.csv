@@ -1,0 +1,2 @@
+verdict,n_tasks,waste_upper,waste_lower,reread_share,truncated_share,recomputed_share
+INCONCLUSIVE,80,"0.471 [0.416, 0.527] (n=80)","0.328 [0.291, 0.364] (n=80)","0.027 [0.020, 0.035] (n=80)","0.236 [0.206, 0.266] (n=80)","0.208 [0.163, 0.254] (n=80)"

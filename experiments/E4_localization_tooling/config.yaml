@@ -1,0 +1,14 @@
+experiment: E4_localization_tooling
+description: >-
+  Localization tooling: graph tools vs in-sandbox skill scripts
+seed: 0
+
+serving:
+  base_url: http://127.0.0.1:8000
+  model: gemma-4-31b-it
+  max_model_len: 32768
+
+sandbox:
+  profile: dev          # use `eval` (4 GiB / 2 vCPU) for headline numbers
+
+params: {}

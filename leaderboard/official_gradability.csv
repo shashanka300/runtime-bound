@@ -1,0 +1,130 @@
+instance_id,repo,gradable,base_exit,patch_exit,reason,missing_modules,seconds
+fastapi_15661,fastapi/fastapi,true,2,0,gradable,"",5.3
+fastapi_15588,fastapi/fastapi,false,2,2,missing module,starlette,5.5
+fastapi_15589,fastapi/fastapi,false,2,2,missing module,starlette,5.3
+fastapi_15030,fastapi/fastapi,false,2,2,missing module,starlette,5.4
+fastapi_14962,fastapi/fastapi,false,2,4,other,"",5.1
+fastapi_15280,fastapi/fastapi,false,2,2,missing module,starlette,5.2
+fastapi_14964,fastapi/fastapi,false,2,4,other,"",5.0
+fastapi_15023,fastapi/fastapi,false,2,2,missing module,starlette,5.2
+fastapi_14986,fastapi/fastapi,false,2,2,missing module,starlette,5.1
+fastapi_14978,fastapi/fastapi,false,2,4,other,"",5.2
+requests_7505,psf/requests,false,4,4,same exit 4,"",4.1
+requests_7502,psf/requests,false,4,4,same exit 4,"",4.0
+requests_7433,psf/requests,false,4,4,same exit 4,"",4.1
+requests_7427,psf/requests,false,4,4,same exit 4,"",4.1
+requests_7315,psf/requests,false,4,4,same exit 4,"",4.0
+requests_7328,psf/requests,false,4,4,same exit 4,"",4.1
+requests_7309,psf/requests,false,4,4,same exit 4,"",4.0
+requests_7205,psf/requests,false,4,4,same exit 4,"",4.0
+rich_4070,Textualize/rich,false,1,1,same exit 1,"",5.8
+rich_4077,Textualize/rich,true,1,0,gradable,"",4.3
+rich_4079,Textualize/rich,false,1,1,same exit 1,"",4.5
+rich_4076,Textualize/rich,true,1,0,gradable,"",4.5
+rich_4075,Textualize/rich,true,1,0,gradable,"",5.1
+rich_4006,Textualize/rich,true,124,0,gradable,"",304.1
+fastapi_14258,fastapi/fastapi,false,2,2,missing module,starlette,5.1
+fastapi_14851,fastapi/fastapi,false,2,2,missing module,starlette,5.2
+fastapi_14873,fastapi/fastapi,false,2,2,missing module,starlette,5.2
+fastapi_13920,fastapi/fastapi,false,2,2,missing module,starlette,5.1
+fastapi_14794,fastapi/fastapi,false,2,2,missing module,starlette,5.2
+fastapi_14786,fastapi/fastapi,false,2,2,missing module,starlette,5.0
+fastapi_14492,fastapi/fastapi,false,2,2,missing module,starlette,5.0
+fastapi_14479,fastapi/fastapi,false,2,2,missing module,starlette,5.1
+fastapi_14463,fastapi/fastapi,false,2,2,missing module,starlette,5.0
+fastapi_12942,fastapi/fastapi,false,2,2,missing module,dirty_equals,4.9
+fastapi_14099,fastapi/fastapi,false,2,4,other,"",5.0
+fastapi_14609,fastapi/fastapi,false,2,2,missing module,starlette,5.1
+fastapi_14372,fastapi/fastapi,false,2,2,missing module,starlette,4.9
+fastapi_14349,fastapi/fastapi,false,2,2,missing module,starlette,4.9
+fastapi_14512,fastapi/fastapi,false,2,2,missing module,starlette,5.0
+fastapi_14487,fastapi/fastapi,false,2,2,missing module,starlette,5.0
+fastapi_11355,fastapi/fastapi,false,2,2,missing module,starlette,5.0
+fastapi_14485,fastapi/fastapi,false,2,2,missing module,starlette,5.0
+fastapi_14482,fastapi/fastapi,false,2,2,missing module,starlette,4.9
+fastapi_14306,fastapi/fastapi,false,2,2,missing module,starlette,5.0
+fastapi_14458,fastapi/fastapi,false,2,2,missing module,starlette,5.1
+fastapi_14459,fastapi/fastapi,false,2,4,other,"",4.9
+fastapi_14448,fastapi/fastapi,false,2,2,missing module,starlette,5.1
+fastapi_14455,fastapi/fastapi,false,2,2,missing module,starlette,5.2
+fastapi_9753,fastapi/fastapi,false,2,2,missing module,starlette,5.0
+fastapi_14430,fastapi/fastapi,false,2,2,missing module,starlette,4.8
+fastapi_5077,fastapi/fastapi,false,2,2,missing module,starlette,4.7
+fastapi_9555,fastapi/fastapi,false,2,2,missing module,starlette,4.7
+fastapi_14361,fastapi/fastapi,false,2,2,missing module,starlette,4.8
+fastapi_13207,fastapi/fastapi,false,2,2,missing module,starlette,4.7
+fastapi_14360,fastapi/fastapi,false,2,2,missing module,dirty_equals,4.7
+fastapi_14356,fastapi/fastapi,false,2,4,other,"",4.7
+fastapi_5624,fastapi/fastapi,false,2,2,missing module,starlette,4.7
+fastapi_14419,fastapi/fastapi,false,2,2,missing module,starlette,4.7
+fastapi_14301,fastapi/fastapi,false,2,2,missing module,starlette,4.8
+fastapi_14262,fastapi/fastapi,false,2,2,missing module,starlette,4.8
+fastapi_14266,fastapi/fastapi,false,2,2,missing module,starlette,4.9
+fastapi_14246,fastapi/fastapi,false,2,4,other,"",4.8
+fastapi_14186,fastapi/fastapi,false,2,2,missing module,starlette,5.0
+fastapi_9425,fastapi/fastapi,false,2,2,missing module,starlette,4.9
+fastapi_13713,fastapi/fastapi,false,2,2,missing module,dirty_equals,6.0
+fastapi_14077,fastapi/fastapi,false,2,2,missing module,starlette,6.6
+rich_3718,Textualize/rich,true,1,0,gradable,"",4.3
+rich_3934,Textualize/rich,true,1,0,gradable,"",8.9
+rich_3953,Textualize/rich,true,1,0,gradable,"",5.8
+rich_3944,Textualize/rich,true,1,0,gradable,"",4.9
+rich_3942,Textualize/rich,true,1,0,gradable,"",5.1
+rich_3938,Textualize/rich,true,1,0,gradable,"",5.8
+rich_3882,Textualize/rich,true,1,0,gradable,"",4.9
+rich_3894,Textualize/rich,true,1,0,gradable,"",5.2
+rich_3935,Textualize/rich,true,1,0,gradable,"",5.3
+rich_3905,Textualize/rich,true,1,0,gradable,"",5.6
+rich_3930,Textualize/rich,false,2,4,other,"",4.9
+httpx_3672,encode/httpx,true,1,0,gradable,"",3.7
+fastapi_14791,fastapi/fastapi,false,2,2,same exit 2,"",7.5
+fastapi_15800,fastapi/fastapi,false,2,2,missing module,anyio,7.4
+fastapi_15785,fastapi/fastapi,false,2,2,missing module,starlette,6.9
+fastapi_14371,fastapi/fastapi,false,2,2,same exit 2,"",5.7
+fastapi_14605,fastapi/fastapi,false,2,2,same exit 2,"",6.3
+fastapi_15763,fastapi/fastapi,false,2,2,missing module,starlette,5.8
+fastapi_14583,fastapi/fastapi,false,2,4,other,"",5.3
+fastapi_15745,fastapi/fastapi,false,2,4,other,"",5.4
+fastapi_14297,fastapi/fastapi,false,2,4,other,"",4.9
+fastapi_14303,fastapi/fastapi,false,2,2,missing module,dirty_equals,5.0
+fastapi_13537,fastapi/fastapi,false,2,2,missing module,starlette,5.0
+fastapi_14953,fastapi/fastapi,false,2,4,other,"",5.2
+fastapi_13786,fastapi/fastapi,false,2,2,same exit 2,"",5.5
+fastapi_14616,fastapi/fastapi,false,2,2,missing module,starlette,5.1
+fastapi_11194,fastapi/fastapi,false,2,2,missing module,starlette,4.9
+requests_6757,psf/requests,false,4,4,same exit 4,"",4.0
+requests_6629,psf/requests,false,4,4,same exit 4,"",3.9
+requests_6644,psf/requests,false,4,4,same exit 4,"",3.9
+requests_6589,psf/requests,false,4,4,same exit 4,"",3.9
+requests_6592,psf/requests,false,4,4,same exit 4,"",3.9
+rich_3180,Textualize/rich,true,1,0,gradable,"",4.7
+rich_3486,Textualize/rich,true,1,0,gradable,"",5.0
+rich_3777,Textualize/rich,true,1,0,gradable,"",5.2
+rich_3468,Textualize/rich,true,1,0,gradable,"",5.2
+rich_3782,Textualize/rich,false,1,1,same exit 1,"",4.7
+rich_3772,Textualize/rich,true,124,0,gradable,"",304.8
+rich_3296,Textualize/rich,false,1,1,same exit 1,"",4.8
+rich_3675,Textualize/rich,true,1,0,gradable,"",5.2
+rich_3676,Textualize/rich,true,1,0,gradable,"",4.9
+rich_3518,Textualize/rich,true,1,0,gradable,"",4.4
+rich_3535,Textualize/rich,true,1,0,gradable,"",4.2
+rich_3521,Textualize/rich,true,1,0,gradable,"",4.5
+rich_3506,Textualize/rich,true,1,0,gradable,"",4.3
+rich_3480,Textualize/rich,true,137,0,gradable,"",272.8
+rich_3472,Textualize/rich,false,2,2,missing module,attr,4.3
+rich_3454,Textualize/rich,true,1,0,gradable,"",4.3
+rich_3471,Textualize/rich,true,1,0,gradable,"",4.5
+rich_3470,Textualize/rich,true,1,0,gradable,"",5.1
+rich_3469,Textualize/rich,false,1,1,same exit 1,"",4.3
+rich_3052,Textualize/rich,true,1,0,gradable,"",4.2
+rich_3278,Textualize/rich,true,1,0,gradable,"",4.2
+rich_2943,Textualize/rich,true,1,0,gradable,"",4.2
+rich_2725,Textualize/rich,true,1,0,gradable,"",4.3
+rich_3105,Textualize/rich,true,1,0,gradable,"",4.6
+rich_3130,Textualize/rich,false,1,1,same exit 1,"",4.4
+rich_3043,Textualize/rich,true,1,0,gradable,"",4.4
+rich_3067,Textualize/rich,true,1,0,gradable,"",4.2
+rich_3006,Textualize/rich,true,1,0,gradable,"",4.2
+rich_3064,Textualize/rich,false,1,1,same exit 1,"",4.3
+rich_3063,Textualize/rich,true,1,0,gradable,"",4.4
+rich_3061,Textualize/rich,true,1,0,gradable,"",4.5

@@ -1,0 +1,26 @@
+# vLLM 0.19.1 (scorer engine, wheelhouse V31) config. Mirrors the scorer's VllmServer
+# (adk_submission 0.2.13 server.py) where one 32 GB GPU allows: tool/reasoning parser gemma4,
+# --reasoning-config with Gemma 4 channel tokens (so thinking_token_budget is applied),
+# --no-scheduler-reserve-full-isl (no waiting-queue stalls for Gemma 4's hybrid KV cache),
+# default enable_thinking true (getting-started notebook). Differences: TP 1 instead of 4;
+# LoRA off unless passed on the command line.
+host: 127.0.0.1
+port: 8000
+# both the short name (swebox) and the declared submission alias (official swegemma CLI)
+served-model-name: [gemma-4-31b-it-qat-w4a16-ct, gemma-4-31b-it]
+tensor-parallel-size: 1
+gpu-memory-utilization: 0.90
+max-model-len: 32768
+max-num-seqs: 16
+enable-prefix-caching: true
+enable-prompt-tokens-details: true
+enable-chunked-prefill: true
+language-model-only: true
+enable-lora: false
+kv-cache-dtype: auto
+enable-auto-tool-choice: true
+tool-call-parser: gemma4
+reasoning-parser: gemma4
+reasoning-config: '{"reasoning_start_str": "<|channel>", "reasoning_end_str": "<channel|>"}'
+# scheduler-reserve-full-isl: false is passed by serve.sh as --no-scheduler-reserve-full-isl (vLLM YAML drops boolean false)
+default-chat-template-kwargs: '{"enable_thinking": true}'

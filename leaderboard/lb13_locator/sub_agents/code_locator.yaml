@@ -1,0 +1,8 @@
+name: code_locator
+description: Read-only helper. Give it the issue's requirement and every exact identifier, message and file name from the issue; it finds the source location to change and returns the target, related places, the current code snippet and the likely test file.
+model: gemma-4-31b-it-qat-w4a16-ct
+instruction: !include ../prompts/locator.md
+tools:
+  - run_command
+  - read_file
+generate_content_config: !include ../configs/sampling.yaml

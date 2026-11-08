@@ -1,0 +1,13 @@
+tag,instance_id,seed,patch_only,primary,scratch_files,repeated_actions,reverted_edits,viewed_gold_file,tool_calls_total,rereads,repo,status,end_reason,agent_error,patch_files,test_exit_code
+t6min,rich_3064,0,no_patch,context_exhausted,1,1,0,true,19,1,rich,gradable,error,litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceed,1,1
+t6min,rich_4076,1,no_patch,context_exhausted,1,1,0,false,23,5,rich,gradable,error,litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceed,1,1
+t6min,fastapi_14986,1,no_patch,context_exhausted,0,0,0,true,20,3,fastapi,gradable,error,litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceed,0,
+t6min,fastapi_15280,0,no_patch,context_exhausted,0,0,0,false,18,2,fastapi,gradable,error,litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceed,0,
+t6min,fastapi_14262,1,no_patch,context_exhausted,0,0,0,false,16,1,fastapi,gradable,error,litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceed,0,
+t6min,requests_7427,0,right_region,context_exhausted,4,1,0,true,18,1,requests,gradable,error,litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceed,5,1
+t6min,rich_3953,2,no_patch,context_exhausted,0,0,0,true,7,0,rich,gradable,error,litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceed,0,
+t6min,fastapi_13713,2,no_patch,context_exhausted,0,0,0,true,16,2,fastapi,gradable,error,litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceed,0,
+t6min,rich_3105,0,no_patch,context_exhausted,0,0,0,false,11,1,rich,gradable,error,litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceed,0,
+t6min,fastapi_11355,0,no_patch,context_exhausted,0,0,0,true,16,0,fastapi,gradable,error,litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceed,0,
+t6min,fastapi_15589,1,no_patch,context_exhausted,0,0,0,true,6,0,fastapi,gradable,error,litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceed,0,
+t6min,fastapi_14978,0,mislocalized_file,context_exhausted,1,0,0,false,17,1,fastapi,gradable,error,litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceed,3,2

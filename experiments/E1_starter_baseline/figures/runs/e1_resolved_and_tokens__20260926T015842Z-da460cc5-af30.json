@@ -1,0 +1,14 @@
+{
+  "figure": "e1_resolved_and_tokens",
+  "created_utc": "2026-09-26T02:34:11.282601+00:00",
+  "source_runs": [
+    "20260926T015842Z-da460cc5-af30"
+  ],
+  "note": "",
+  "config_hash": "da460cc5b226",
+  "git": {
+    "sha": "76b52cb457b00dd0a3b5598c881eeb4ad775eeb9",
+    "branch": "main",
+    "dirty": false
+  }
+}

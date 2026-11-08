@@ -1,0 +1,6 @@
+# Per-task budgets (see leaderboard/build.py)
+evaluation:
+  max_time_minutes: 5
+  max_tool_calls: 500
+  max_turns: 500
+  timeout_seconds: 60

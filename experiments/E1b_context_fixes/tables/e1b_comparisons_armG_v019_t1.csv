@@ -1,0 +1,2 @@
+comparison,rate_a,rate_b,diff,lo,hi,n,only_a,only_b,p_mcnemar,significant
+G - B,0.3,0.175,-0.125,-0.25,0.0,40,6,1,0.125,false

@@ -1,0 +1,33 @@
+experiment: E0_serving_benchmark
+description: >-
+  Serving benchmark for gemma-4-31B-it-qat-w4a16-ct on one RTX 5090: throughput,
+  latency, KV headroom and energy across concurrency x context x shared-prefix.
+  Gate G1: the model serves correctly at 32k.
+seed: 0
+
+serving:
+  base_url: http://127.0.0.1:8000
+  model: gemma-4-31b-it
+  max_model_len: 32768
+
+sandbox:
+  profile: dev          # no sandbox containers in E0; recorded for completeness
+
+monitor:
+  interval_s: 1.0
+  docker: false         # no containers in this experiment
+
+tracking:
+  mlflow_uri: http://127.0.0.1:5000
+  phoenix_endpoint: http://127.0.0.1:6006/v1/traces
+
+params:
+  tokenizer: google/gemma-4-31B-it-qat-w4a16-ct
+  concurrency: [1, 4, 8]
+  context_lens: [8192, 16384, 32768]
+  prefix_lens: [0, 4096]
+  output_len: 512
+  prompts_per_slot: 4
+  min_prompts: 8
+  warmup_prompts: 2
+  cooldown_s: 5.0

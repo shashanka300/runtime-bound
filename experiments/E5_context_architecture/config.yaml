@@ -1,0 +1,22 @@
+experiment: E5_context_architecture
+description: >-
+  Phase-decomposed agent (locate -> reproduce -> (edit -> verify) x3), fresh context per phase,
+  identical shared prompt prefix, vs the tuned monolithic agent (E1b arm B) on dev40 x 2 seeds.
+seed: 0
+
+serving:
+  base_url: http://127.0.0.1:8000
+  model: gemma-4-31b-it
+  max_model_len: 32768
+
+sandbox:
+  profile: dev
+
+params:
+  variant: phase_v2
+  subset: dev40
+  seeds: [0, 1]
+  time_minutes: 6.0
+  output_reserve: 4096
+  concurrency: 2
+  g3_min_gain: 0.05

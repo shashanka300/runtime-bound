@@ -1,0 +1,12 @@
+# Copy to  C:\Users\<you>\.wslconfig  and run  `wsl --shutdown`  from PowerShell.
+# Host: Ryzen 9 9900X (24 threads), 62 GB RAM, RTX 5090.
+# Default WSL cap is 50% RAM (~30 GB): too small for vLLM host buffers + several
+# sandbox containers + JupyterLab. Leave ~6 GB for Windows.
+[wsl2]
+memory=56GB
+processors=24
+swap=16GB
+# Faster reclaim of page cache back to Windows when idle.
+[experimental]
+autoMemoryReclaim=dropCache
+sparseVhd=true

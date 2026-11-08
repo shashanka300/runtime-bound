@@ -1,0 +1,14 @@
+{
+  "figure": "e2_context_growth_e1_full",
+  "created_utc": "2026-09-26T08:35:15.290931+00:00",
+  "source_runs": [
+    "20260926T083505Z-ca759edb-1ccf"
+  ],
+  "note": "",
+  "config_hash": "ca759edb503c",
+  "git": {
+    "sha": "c6fe9cb8a664f910fea6644c6906768845ce8faf",
+    "branch": "main",
+    "dirty": true
+  }
+}

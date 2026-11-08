@@ -1,0 +1,2 @@
+verdict,gain,lo,hi,n,only_baseline,only_phase,p_mcnemar
+FAIL (worse),-0.15,-0.275,-0.025,40,7,1,0.0703125

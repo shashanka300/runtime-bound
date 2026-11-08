@@ -1,0 +1,10 @@
+primary,patch_only,len
+context_exhausted,no_patch,186
+context_exhausted,mislocalized_file,22
+context_exhausted,right_region,11
+context_exhausted,mislocalized_region,7
+mislocalized_file,mislocalized_file,4
+mislocalized_region,mislocalized_region,1
+time_exhausted,no_patch,3
+time_exhausted,right_region,1
+wrong_edit,right_region,15

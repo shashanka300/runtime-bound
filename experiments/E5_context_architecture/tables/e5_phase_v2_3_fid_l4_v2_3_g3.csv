@@ -1,0 +1,2 @@
+verdict,gain,lo,hi,n,only_baseline,only_phase,p_mcnemar
+FAIL (gain within noise),-0.075,-0.175,0.025,40,4,1,0.375

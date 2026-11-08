@@ -1,0 +1,15 @@
+Third-party material in this repository
+
+leaderboard/_public_recipe_honghanhhh_024/
+  Agent configuration files (agent.yaml, eval_config.yaml, configs/sampling.yaml,
+  prompts/system.md) from the public Kaggle notebook "Gemma 4 Baseline | LB 0.24"
+  (honghanhhh/gemma-4-baseline-lb-0-24), itself derived from "Gemma 4 | Budget-Aware Coding
+  Agent v2" (flexonafft/gemma-4-budget-aware-coding-agent-v2). Extracted byte for byte from the
+  config-identical fork kawh1111/g4-baseline-024. Public Kaggle notebooks are released under
+  the Apache License 2.0 (https://www.apache.org/licenses/LICENSE-2.0). The bundles lb04 and
+  later in leaderboard/ are built from these files by leaderboard/build.py; every change made
+  to them is recorded there and in leaderboard/README.md.
+
+No competition data (task statements, gold patches, repository snapshots, wheels, code graphs
+or embeddings) is included. Scripts that need it download it from Kaggle after the user has
+accepted the competition rules.
