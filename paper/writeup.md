@@ -1,7 +1,7 @@
 # Runtime-Bound: What Limits a Local 31B Coding Agent, and What Local Evaluation Gets Wrong
 *Subtitle: on a fixed 12-hour, 32k-context scorer, the runtime decides more than the prompt, the adapter or the weights*
 
-**Shashanka B. R.**<sup>1</sup> · shashanka.b.r@ibm.com  
+**Shashanka B R**<sup>1</sup> · <sup>1</sup>IBM · shashanka.b.r@ibm.com  
 Code: https://github.com/shashanka300/runtime-bound · PDF: https://github.com/shashanka300/runtime-bound/blob/main/paper/main.pdf
 
 <!-- Kaggle Paper Track: 3,000 words max. Required: title, subtitle, abstract, introduction,
