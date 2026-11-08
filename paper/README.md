@@ -6,4 +6,4 @@
 - `make_figures.py`: regenerates `figures/` (run from the repository root:
   `python paper/make_figures.py`); figure 2 reads the lb04 screen traces under `data/`.
 - `writeup.md`: the same text in Markdown, for the Kaggle Writeup body.
-- `resource/`: the second writeup (Best New Resource), "Scorer in a Box": `cd paper/resource && tectonic -X compile main.tex`.
+- `resource/` (with its own `writeup.md`): the second writeup (Best New Resource), "Scorer in a Box": `cd paper/resource && tectonic -X compile main.tex`.
